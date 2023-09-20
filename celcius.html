@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <title>convert temperatures to and from celsius, fahrenheit in js</title>
+  </head>
+  <body>
+</body>
+  </html> 
+  <script>
+    function gaurav(celsius) 
+{
+  var celciusTemp = celsius;
+  var celciusToFahr = celciusTemp * 9 / 5 + 32;
+  var message = celciusTemp+'\xB0C is ' + celciusToFahr + ' \xB0F.';
+   document.write(message);
+}
+
+function sumit(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    document.write(message);
+} 
+gaurav(60);
+summit(45);
+
+  </script>

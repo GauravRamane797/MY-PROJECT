@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <title>simple notepad</title>
+
+  <head>
+    <style>
+      #button {
+        width: "25px";
+        font-style: "italic";
+        height: "24px";
+        font-size: "30";
+      }
+      #button1 {
+        width: 26px;
+        height: 24px;
+        text-decoration: underline;
+        font-size: 8;
+      }
+      #button2 {
+        width: 26px;
+        height: 24px;
+      }
+      #output {
+        width: 399px;
+        height: 182px;
+      }
+      p {
+        align-items: center;
+        text-align:center;
+
+      }
+    </style>
+  </head>
+
+  <body onload="load_text()">
+    <form name="controls" id="controls">
+      <select style="width: 310px">
+        <option selected>fonts</option>
+        <option>arial black</option>
+      </select>
+
+      <input
+        id="button1"
+        type="button"
+        value="B"
+        name="button1"
+        onclick="bold_click()" />
+
+      <input type="button" value="i" onclick="italic_click()" />
+
+      <input
+        id="button1"
+        type="button"
+        value="u"
+        name="button1"
+        onclick="underline_click()" />
+
+      <input
+        id="button2"
+        type="button"
+        value="n"
+        name="button1"
+        onclick="normal_click()" />
+
+      <br /><textarea
+        id="output"
+        name="output"
+        rows="9"
+        wrap="virtual"
+        cols="48"></textarea
+      ><br />
+   
+        <input type="reset" value="clear" />
+      <button id="sumit" type="submit">Save</button> 
+    
+    </form>
+  </body>
+  <script>
+
+    const gaurav = document.getElementById('sumit'); 
+     
+    gaurav.addEventListener('click', function() { 
+      // Code to save data goes here 
+      console.log('Data saved!'); 
+    }); 
+
+    function load_text() {
+      document.getElementById("output").value = "text....";
+    }
+
+    function bold_click() {
+      document.getElementById("output").style.fontWeight = "bold";
+    }
+
+    function underline_click() {
+      document.getElementById("output").style.textDecoration = "underline";
+    }
+
+    function italic_click() {
+      document.getElementById("output").style.fontStyle = "italic";
+    }
+
+    function normal_click() {
+      document.getElementById("output").style.fontStyle = "normal";
+      document.getElementById("output").style.textDecoration = "none";
+      document.getElementById("output").style.fontWeight = "normal";
+    }
+  </script>
+</html>

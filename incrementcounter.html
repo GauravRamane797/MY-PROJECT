@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #counter {
+            font-size: 24px;
+            margin: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Increment Counter</h1>
+    <div id="counter">0</div>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        // JavaScript code
+        const counterElement = document.getElementById("counter");
+        const incrementButton = document.getElementById("increment");
+        const decrementButton = document.getElementById("decrement");
+        const resetButton = document.getElementById("reset");
+
+        let counterValue = 0;
+
+        // Function to update the counter value on the webpage
+        function updateCounter() {
+            counterElement.textContent = counterValue;
+        }
+
+        // Event listener for the Increment button
+        incrementButton.addEventListener("click", () => {
+            counterValue++;
+            updateCounter();
+        });
+
+        // Event listener for the Decrement button
+        decrementButton.addEventListener("click", () => {
+            counterValue--;
+            updateCounter();
+        });
+
+        // Event listener for the Reset button
+        resetButton.addEventListener("click", () => {
+            counterValue = 0;
+            updateCounter();
+        });
+
+        // Initial update
+        updateCounter();
+    </script>
+</body>
+</html>
